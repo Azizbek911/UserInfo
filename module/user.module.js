@@ -14,17 +14,16 @@ const userSchema = new mongoose.Schema({
     },
     last_name: {
         type: String,
-        required: [true, "Last name is required"],
         trim: true,
     },
     username: {
         type: String,
-        required: [true, "Username is required"],
         trim: true,
     },
 }, { timestamps: true });
 
 
 const User = mongoose.model("users", userSchema);
+
 
 export default User;
